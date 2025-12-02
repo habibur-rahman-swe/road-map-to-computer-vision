@@ -8,7 +8,7 @@ A comprehensive, prioritized guide with visual progress tracking for becoming a 
 
 | Section | Topic | Status |
 |---------|-------|--------|
-| Mathematics Fundamentals | Vectors and Vector Spaces | <ul><li>- [x] item1</li><li>- [ ] item2</li></ul> |
+| Mathematics Fundamentals | Vectors and Vector Spaces | <ul><li>- [x]</li></ul> |
 | Mathematics Fundamentals | Matrices and Matrix Operations | [ ] |
 | Mathematics Fundamentals | Eigenvalues and Eigenvectors | [ ] |
 | Mathematics Fundamentals | Singular Value Decomposition (SVD) | [ ] |
