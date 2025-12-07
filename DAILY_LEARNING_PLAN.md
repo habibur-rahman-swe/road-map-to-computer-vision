@@ -30,13 +30,13 @@
 ### Week 1-4: Linear Algebra
 **Days**: 20-25 days | **Daily**: 45 min lectures + 15 min practice
 
-- [ ] Vectors and Vector Spaces
-- [ ] Matrix Operations (add, multiply, transpose)
-- [ ] Determinants and Matrix Inverse
-- [ ] Eigenvalues and Eigenvectors
-- [ ] Singular Value Decomposition (SVD)
-- [ ] Linear Transformations
-- [ ] Applications in Computer Vision
+- [x] Vectors and Vector Spaces
+- [x] Matrix Operations (add, multiply, transpose)
+- [x] Determinants and Matrix Inverse
+- [x] Eigenvalues and Eigenvectors
+- [x] Singular Value Decomposition (SVD)
+- [x] Linear Transformations
+- [x] Applications in Computer Vision
 
 **Resources**:
 - 📺 3Blue1Brown "Essence of Linear Algebra" (YouTube, free)

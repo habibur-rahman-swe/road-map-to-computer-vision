@@ -9,12 +9,12 @@ A comprehensive, prioritized guide with visual progress tracking for becoming a 
 | Section | Topic | Status |
 |---------|-------|--------|
 | Mathematics Fundamentals | Vectors and Vector Spaces | ✅ |
-| Mathematics Fundamentals | Matrices and Matrix Operations | [ ] |
-| Mathematics Fundamentals | Eigenvalues and Eigenvectors | [ ] |
-| Mathematics Fundamentals | Singular Value Decomposition (SVD) | [ ] |
-| Mathematics Fundamentals | Linear Transformations | [ ] |
-| Mathematics Fundamentals | Matrix Decomposition | [ ] |
-| Mathematics Fundamentals | Determinants and Inverses | [ ] |
+| Mathematics Fundamentals | Matrices and Matrix Operations | ✅ |
+| Mathematics Fundamentals | Eigenvalues and Eigenvectors | ✅ |
+| Mathematics Fundamentals | Singular Value Decomposition (SVD) | ✅ |
+| Mathematics Fundamentals | Linear Transformations | ✅ |
+| Mathematics Fundamentals | Matrix Decomposition | ✅ |
+| Mathematics Fundamentals | Determinants and Inverses | ✅ |
 | Mathematics Fundamentals | Tensor Operations | [ ] |
 | Mathematics Fundamentals | Differential Calculus | [ ] |
 | Mathematics Fundamentals | Partial Derivatives | [ ] |
