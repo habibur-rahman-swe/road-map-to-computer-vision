@@ -47,6 +47,65 @@ Download and license rules:
 - Split by event, never by random post. Train on earlier events (1–75). Keep later events (76–122) as the untouched test set. The track page says those later labels must not be used to submit a leaderboard run that was tuned on them. For this paper, use them only as a final test, after every model choice is finished.
 - If the download server is offline, email the maintainers. Do not replace TREC-IS with a scraped social-media dump.
 
+## Other dataset present in this folder
+
+A second corpus sits in `papers/text-urgency-llm/Bengali Medical Dataset/doctor_qa_dataset.csv`. It is recorded here for provenance only. It is not the dataset of this paper and must not be substituted for TREC-IS.
+
+| Field | Value |
+| --- | --- |
+| Hugging Face Hub ID | `shetumohanto/doctor_qa_bangla` |
+| Maintainer | Shetu Mohanto (HF user `shetumohanto`) |
+| Hosted | Directly on the Hugging Face Hub |
+| Intended use | Instruction fine-tuning, Q&A training, and medical text classification for Bengali NLP models |
+| Content | Medical questions asked by users paired with doctor responses, in Bengali and Banglish |
+| Local file | `doctor_qa_dataset.csv`, one `text` column |
+| Row format | `<s> [INST] <question> [/INST] <doctor answer> </s>` |
+| Labels | None. Question and answer are concatenated into a single string |
+
+Why it cannot serve Paper 1:
+
+- It carries no priority annotation and no event identifiers, so there is no Critical, High, Medium, Low, or Irrelevant label to classify and no way to split by event.
+- Priority labels would have to be inferred from the wording of the doctor answer. Those would be self-generated pseudo-labels, which the rule in the section above forbids. A study built on them would measure the author's annotation scheme, not human-judged priority.
+- The domain is Bengali pediatric patient queries, not English emergency-related social posts. Results would not be comparable to the framing of this paper or to the later face paper.
+
+Permitted use: as a smoke test for the Phase D harness, to confirm the chat template, generation settings, and parse-failure logging work end to end without opening the TREC-IS test events. Record nothing from it in the results table of this paper.
+
+License for the corpus has not been recorded here. Check the dataset card on the Hub and write the license down before any use, including the smoke test.
+
+### Second corpus, referenced but not downloaded
+
+Not present in this folder. Recorded so the provenance is written down rather than recalled from memory.
+
+| Field | Value |
+| --- | --- |
+| Kaggle URL | https://www.kaggle.com/datasets/shashwatwork/bengali-medical-dataset |
+| Kaggle title | Bengali Medical Dataset |
+| Kaggle publisher | `shashwatwork` |
+| File of interest | `Specialist Classification.csv` |
+| Companion file | `Bengali Medical NER.csv` |
+| Language | Bengali |
+| Content | Roughly six hundred patient chief-complaint statements, about eight thousand words, plus specialist labels such as medicine specialist, cardiologist, dentist, gynecologist |
+| Second part | Manually annotated named entities: symptoms, body parts, colors, body fluids, blood, times, values, directions, effluents, adverbs |
+| Size as reported | 658 utterances across 9 specialties, per the CrossStack-BERT report on this corpus |
+| Upstream origin | A Kaggle re-upload of the Mendeley Data record below |
+| Mendeley title | Bengali Colloquial Dataset of Primary Medical Issues for Improving Health System |
+| Mendeley link supplied by the author | https://data.mendeley.com/datasets/4tt953xwk2/1, this points at version 1 |
+| Mendeley landing page | https://data.mendeley.com/datasets/4tt953xwk2, this currently shows version 3 |
+| Mendeley DOI | https://doi.org/10.17632/4tt953xwk2.3 for version 3, published 9 July 2021. The version 1 DOI is https://doi.org/10.17632/4tt953xwk2.1 |
+| Mendeley contributors | Dr. M. F. Mridha, Tanvir Islam, Sakila Mahbin Zinat |
+| Institution | Bangladesh University of Business and Technology, BUBT Medical Center |
+| Mendeley license | CC BY 4.0 |
+| Stated restriction | Health-systems research with AI, ML, DL, and NLP only. Explicitly not for treatment purposes |
+
+Why it cannot serve Paper 1:
+
+- The label is which specialist a patient should see, not how urgent the situation is. There is no Critical, High, Medium, Low, or Irrelevant class and no priority score to map onto the 1–10 display scale.
+- There are no event identifiers. The 658 utterances are aggregated chief complaints, not posts from discrete incidents, so an event split cannot be built.
+- Converting specialist label into urgency would be an invented labeling scheme. That is the same failure the rule in the Dataset section forbids.
+- The stated Mendeley restriction also limits use to health-systems research, which an emergency-priority paper on social posts falls outside.
+
+Permitted use: none for this paper. Do not train, tune, or validate on it. Cite it only if a related-work section discusses Bengali medical NLP resources, and cite the Mendeley DOI rather than the Kaggle mirror, because the mirror carries no license of its own.
+
 ## What the paper may claim
 
 - A compute-limited comparison of a lexical baseline, a fine-tuned open encoder, and a small open instruction model on TREC-IS priority.
