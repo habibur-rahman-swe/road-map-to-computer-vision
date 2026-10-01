@@ -53,7 +53,7 @@ A second corpus sits in `papers/text-urgency-llm/Bengali Medical Dataset/doctor_
 
 | Field | Value |
 | --- | --- |
-| Hugging Face Hub ID | `shetumohanto/doctor_qa_bangla` |
+| Hugging Face Hub ID | `https://huggingface.co/datasets/shetumohanto/doctor_qa_bangla` |
 | Maintainer | Shetu Mohanto (HF user `shetumohanto`) |
 | Hosted | Directly on the Hugging Face Hub |
 | Intended use | Instruction fine-tuning, Q&A training, and medical text classification for Bengali NLP models |
