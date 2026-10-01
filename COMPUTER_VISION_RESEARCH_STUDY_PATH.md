@@ -31,7 +31,7 @@ A schedule-free, from-the-beginning checklist. Work in order where prerequisites
 ## Phase 0: Computer and Learning Foundations
 
 ### Theory and concepts
-- [ ] Learn what files, folders, paths, processes, memory, and programs are.
+- [x] Learn what files, folders, paths, processes, memory, and programs are.
 - [ ] Learn bits, bytes, binary numbers, and how file size differs from image dimensions.
 - [ ] Learn file paths, extensions, folders, absolute paths, and relative paths.
 - [ ] Learn the difference between source code, an interpreter, a program, and a process.
